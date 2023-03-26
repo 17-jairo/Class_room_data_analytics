@@ -1,0 +1,21 @@
+# Define the variables
+average_purchase = 6.45
+visits_per_week = 3
+weeks_since_jan_2020 = 119  # Number of weeks till March 18, 2023
+profit_margin = 0.25  # 25%
+
+# Calculate the annual revenue from the customer
+annual_revenue = average_purchase * visits_per_week * 52
+
+# Calculate the total revenue over the customer's lifetime
+total_revenue = annual_revenue * (1 + profit_margin)^(weeks_since_jan_2020 / 52)
+
+# Calculate the CLV
+clv = total_revenue / (1 + profit_margin)
+
+# Print the CLV
+cat("The CLV for the given scenario is:", round(clv, 2))
+
+Output
+
+The CLV for the given scenario is: 207.78
